@@ -1,0 +1,26 @@
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 4rem;
+}
+
+.notFound h2 {
+  font-size: 2rem;
+}
+
+.notFound button {
+  border: none;
+  margin-top: 1rem;
+}
+
+.notFound a {
+  display: block;
+  padding: 0.9rem 2rem;
+  background-color: var(--color-2);
+  border-radius: var(--gap);
+  text-decoration: none;
+  color: var(--color-3);
+}

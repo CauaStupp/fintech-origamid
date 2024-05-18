@@ -1,3 +1,4 @@
+import { useLocation, useNavigate } from "react-router-dom";
 import { useData } from "../context/DataContext";
 import styles from "./MonthButton.module.css";
 
@@ -16,6 +17,8 @@ function formatDate(date: Date) {
 
 const MonthButton = ({ value }: { value: number }) => {
   const {setInicio, setFinal} = useData();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   function setMonth(value: number) {
     const date = new Date();
@@ -24,6 +27,12 @@ const MonthButton = ({ value }: { value: number }) => {
     const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
     setInicio(formatDate(firstDay));
     setFinal(formatDate(lastDay));
+
+    if (location.pathname !== "/") {
+      navigate('/');
+    } else {
+      return null;
+    }
   }
 
   return <button className={styles.btn} onClick={() => setMonth(value)}>{monthName(value)}</button>;
