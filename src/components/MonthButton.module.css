@@ -1,0 +1,9 @@
+.btn {
+  padding: var(--gap) var(--gap-s);
+  background-color: var(--color-3);
+  border: none;
+  border-radius: var(--gap);
+  color: var(--color-1);
+  font-weight: 600;
+  text-transform: capitalize;
+}

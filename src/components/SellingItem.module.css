@@ -1,0 +1,28 @@
+.selling {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  gap: var(--gap);
+  margin-bottom: var(--gap-s);
+  align-items: center;
+}
+
+.selling a {
+  font-family: monospace;
+  text-decoration: none;
+  color: inherit;
+}
+
+.selling div:last-child {
+  justify-self: end;
+}
+
+
+@media (max-width: 700px) {
+  .selling {
+    grid-template-columns: 1fr;
+  }
+
+  .selling div:last-child {
+    justify-self: start;
+  }
+}

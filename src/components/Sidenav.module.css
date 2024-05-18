@@ -1,0 +1,41 @@
+.sidenav li {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-s);
+}
+
+.sidenav li:hover span {
+  background-color: var(--color-3);
+}
+
+.sidenav li span {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--color-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--gap);
+  transition: 0.2s background-color;
+}
+
+.sidenav li a {
+  flex: 1;
+  font-size: 1.125rem;
+  text-decoration: none;
+  color: var(--color-1);
+  padding: var(--gap-s) 0;
+}
+
+
+
+@media (max-width: 700px) {
+  .sidenav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sidenav ul li a {
+    font-size: 0.875rem;
+  }
+}
